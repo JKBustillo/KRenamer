@@ -1,37 +1,46 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #0f0f0f;
-  background-color: #f6f6f6;
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 
-.container {
-  margin: 0;
-  padding-top: 12vh;
+.app-shell__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.app-shell__brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.app-shell__main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 48px 24px;
 }
 
-h1 {
-  font-size: 2.4rem;
+.app-shell__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.6rem;
   margin: 0;
+  color: var(--text-primary);
 }
 
-.subtitle {
-  color: #6b6b6b;
-  margin-top: 0.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #1f1f1f;
-  }
-  .subtitle {
-    color: #a0a0a0;
-  }
+.app-shell__subtitle {
+  margin-top: 0.4rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
 }

@@ -1,0 +1,76 @@
+/*
+ * Sistema de temas de KRenamer.
+ * Dos temas conmutables que comparten el MISMO set de variables; los
+ * componentes se estilizan solo con estas variables (nunca colores fijos),
+ * así cambiar `data-theme` en <html> reskinea toda la app.
+ *
+ * - sumi     (default): claro, editorial japonés. Acento bermellón.
+ * - terminal: oscuro, técnico. Acento ácido (verde lima) + cian.
+ */
+
+:root,
+[data-theme="sumi"] {
+  color-scheme: light;
+
+  --bg-primary: #efeae0;
+  --bg-elevated: #f7f4ee;
+  --text-primary: #1b1714;
+  --text-soft: #6a6157;
+
+  --accent: #c0392b;
+  --accent-strong: #97271c;
+  --on-accent: #ffffff;
+
+  --danger: #c0392b;
+  --warning: #b3791b;
+  --success: #3f6f5f;
+
+  --border: rgba(27, 23, 20, 0.14);
+  --border-strong: rgba(27, 23, 20, 0.28);
+
+  --font-display: "Shippori Mincho B1", Georgia, serif;
+  --font-body: "Zen Kaku Gothic New", system-ui, sans-serif;
+}
+
+[data-theme="terminal"] {
+  color-scheme: dark;
+
+  --bg-primary: #0c0f12;
+  --bg-elevated: #12171c;
+  --text-primary: #d7e0e6;
+  --text-soft: #6e7d88;
+
+  --accent: #b6ff3a;
+  --accent-strong: #8fd615;
+  --on-accent: #0a0d10;
+
+  --danger: #ff5a52;
+  --warning: #ffb43a;
+  --success: #45d6e0;
+
+  --border: #232c34;
+  --border-strong: #2e3a44;
+
+  --font-display: "IBM Plex Mono", ui-monospace, monospace;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
