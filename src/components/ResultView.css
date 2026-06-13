@@ -1,0 +1,124 @@
+.result-view {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.result-view__summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+  padding: 16px 0 8px;
+}
+
+.result-view__mark {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--on-accent);
+  background: var(--success);
+}
+
+.result-view__mark--error {
+  background: var(--warning);
+}
+
+.result-view__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.result-view__counts {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+.result-view__failed {
+  color: var(--danger);
+}
+
+.result-view__list {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.result-view__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.result-view__item:nth-child(odd) {
+  background: var(--bg-primary);
+}
+
+.result-view__item--error {
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+}
+
+.result-view__icon {
+  color: var(--success);
+  font-weight: 700;
+}
+
+.result-view__item--error .result-view__icon {
+  color: var(--danger);
+}
+
+.result-view__name {
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.result-view__error {
+  margin-left: auto;
+  color: var(--danger);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.result-view__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.result-view__restart {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 11px 24px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-strong);
+  background: var(--accent);
+  color: var(--on-accent);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.result-view__restart:hover {
+  transform: translateY(-1px);
+}
+
+.result-view__restart:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
