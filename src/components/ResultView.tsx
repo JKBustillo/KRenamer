@@ -66,7 +66,7 @@ export function ResultView({ outcomes, onRestart }: ResultViewProps) {
           className="result-view__restart"
           onClick={onRestart}
         >
-          Renombrar otra carpeta
+          Renombrar otro lote
         </button>
       </div>
     </div>

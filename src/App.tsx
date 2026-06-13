@@ -4,7 +4,6 @@ import { useScannedFiles } from "./hooks/useScannedFiles";
 import { useFileDrop } from "./hooks/useFileDrop";
 import { useLivePreview } from "./hooks/useLivePreview";
 import { useApply } from "./hooks/useApply";
-import { ThemeToggle } from "./components/ThemeToggle";
 import { DropZone } from "./components/DropZone";
 import { PatternForm } from "./components/PatternForm";
 import { PreviewTable } from "./components/PreviewTable";
@@ -15,7 +14,7 @@ import { DEFAULT_RENAME_PLAN } from "./types/renamePlan";
 import "./App.css";
 
 function App() {
-  const { theme, setTheme, toggleTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const { files, loading, error, addPaths, clear } = useScannedFiles();
   const { isHovering } = useFileDrop(addPaths);
   const [plan, setPlan] = useState(DEFAULT_RENAME_PLAN);
@@ -64,7 +63,6 @@ function App() {
               Limpiar
             </button>
           )}
-          <ThemeToggle theme={theme} onToggle={toggleTheme} />
           <button
             type="button"
             className="app-shell__icon-btn"
