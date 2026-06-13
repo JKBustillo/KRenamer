@@ -21,11 +21,11 @@ export function DropZone({
       <div className="drop-zone__glyph" aria-hidden="true">
         ⤓
       </div>
-      <h2 className="drop-zone__title">Arrastrá una carpeta o archivos</h2>
+      <h2 className="drop-zone__title">Arrastra una carpeta o archivos</h2>
       <p className="drop-zone__hint">
         {loading
           ? "Escaneando…"
-          : "Soltá las páginas de tu manga aquí para empezar a renombrar."}
+          : "Suelta las páginas de tu manga aquí para empezar a renombrar."}
       </p>
       <div className="drop-zone__actions">
         <button

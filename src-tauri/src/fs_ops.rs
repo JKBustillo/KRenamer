@@ -222,13 +222,13 @@ fn blocking_reason(rows: &[PreviewRow]) -> Option<String> {
     let has_collision = rows.iter().any(|r| r.collision);
     match (has_invalid, has_collision) {
         (true, true) => {
-            Some("Hay nombres inválidos y colisiones; corregí el patrón antes de aplicar.".into())
+            Some("Hay nombres inválidos y colisiones; corrige el patrón antes de aplicar.".into())
         }
         (true, false) => {
-            Some("Hay nombres inválidos para Windows; corregí el patrón antes de aplicar.".into())
+            Some("Hay nombres inválidos para Windows; corrige el patrón antes de aplicar.".into())
         }
         (false, true) => {
-            Some("Hay colisiones de nombres; corregí el patrón antes de aplicar.".into())
+            Some("Hay colisiones de nombres; corrige el patrón antes de aplicar.".into())
         }
         (false, false) => None,
     }
