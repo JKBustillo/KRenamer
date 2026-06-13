@@ -1,0 +1,9 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sello hanko: cuadrado redondeado bermellón (acento del tema sumi) -->
+  <rect x="112" y="112" width="800" height="800" rx="180" fill="#c0392b"/>
+  <!-- Kanji 改 ("cambiar / revisar") en blanco papel -->
+  <text x="512" y="512"
+        font-family="Yu Mincho, 'MS Mincho', 'Yu Gothic', 'MS Gothic', Meiryo, serif"
+        font-size="600" font-weight="700" fill="#f7f4ee"
+        text-anchor="middle" dominant-baseline="central">改</text>
+</svg>
