@@ -1,4 +1,5 @@
-mod fs_ops;
+pub mod fs_ops;
+pub mod rename;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
