@@ -1,0 +1,128 @@
+.preview-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-elevated);
+  overflow: hidden;
+}
+
+.preview-table__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.preview-table__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.preview-table__count {
+  font-size: 0.8rem;
+  color: var(--text-soft);
+}
+
+.preview-table__warn {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.preview-table__loading {
+  color: var(--text-soft);
+  font-style: italic;
+}
+
+.preview-table__scroll {
+  max-height: 460px;
+  overflow-y: auto;
+}
+
+.preview-table__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.preview-table__table th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  background: var(--bg-elevated);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.preview-table__table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.preview-table__index {
+  color: var(--text-soft);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.preview-table__old {
+  color: var(--text-soft);
+  word-break: break-all;
+}
+
+.preview-table__arrow {
+  color: var(--accent);
+  text-align: center;
+}
+
+.preview-table__new {
+  color: var(--text-primary);
+  word-break: break-all;
+}
+
+.preview-table__row--collision td {
+  background: color-mix(in srgb, var(--danger) 8%, transparent);
+}
+
+.preview-table__row--invalid td {
+  background: color-mix(in srgb, var(--warning) 10%, transparent);
+}
+
+.preview-table__badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.preview-table__badge--ok {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+}
+
+.preview-table__badge--collision {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+}
+
+.preview-table__badge--invalid {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 16%, transparent);
+}
